@@ -1,0 +1,14 @@
+<div 
+      class="dynamic-field form-radio"
+      [formGroup]="group">
+      <label>{{ config.label }}</label>
+      <div *ngFor="let option of config.options">
+      <input 
+      type="radio" 
+      [name]="config.name" 
+      [value]="option" [formControlName]="config.name"
+      [checked]="option.checked"/>
+      {{option.value}}
+      
+      </div>
+</div>
